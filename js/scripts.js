@@ -9,6 +9,10 @@ $(document).ready(function() {
     event.preventDefault();
 
   });
+  $("#fewer-input-button").click(function(event) {
+    $("#more-fields div:last-child").remove();
+    event.preventDefault();
+  })
 
   $("#groceries").submit(function(event) {
     var grocList = grocID.map(function(groc){
