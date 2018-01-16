@@ -10,14 +10,16 @@ $(document).ready(function() {
     });
     event.preventDefault();
   });
+
   $("#sentence").submit(function(event) {
     var sentenceList = $("#food4").val().split(" ")
-    var largeSentence = sentenceList.map(function(list) {
-      if (list.length > 3) {
-        return list;
-      }
-    })
-    console.log(largeSentence);
+    console.log(sentenceList);
+    var largeSentence = sentenceList.filter(function(word) {
+      return word.length > 3;
+    });
+
+    $("#listOutput").html("<p>" + largeSentence.reverse().join(" ") + "</p>");
+
     event.preventDefault();
   })
 });
