@@ -14,25 +14,30 @@
       <h2>Please fill out your grocery list</h2>
       <form id="groceries">
         <div class="form-group">
-          <input type="text" id="food1" class="form-control">
+          <input type="text" id="groc1" class="form-control">
         </div>
         <div class="form-group">
-          <input type="text" id="food2" class="form-control">
+          <input type="text" id="groc2" class="form-control">
         </div>
         <div class="form-group">
-          <input type="text" id="food3" class="form-control">
+          <input type="text" id="groc3" class="form-control">
         </div>
+        <div id="more-fields"></div>
+        <button class="btn btn-warning" id="more-input-button">Click for more items</button>
         <button class="btn btn-primary" type="submit">Submit</button>
       </form>
-      <h2>Enter a sentence</h2>
-      <form id="sentence">
-        <div class="form-group">
-          <textarea type="text" form="groceries" id="food4" class="form-control"></textarea>
-        </div>
-        <button class="btn btn-primary" type="submit">Submit</button>
-      </form>
+      <div id="form2">
+        <h2>Enter a sentence</h2>
+        <form id="sentence">
+          <div class="form-group">
+            <textarea type="text" form="groceries" id="food4" class="form-control"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+      </div>
       <div id="listOutput">
       </div>
+
     </div>
 
   </body>
