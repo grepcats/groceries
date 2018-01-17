@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+  //click button for more items on form
   var grocCount = 3;
   var grocID = ["groc1", "groc2", "groc3"];
   $("#more-input-button").click(function(event) {
@@ -7,22 +9,22 @@ $(document).ready(function() {
 
     grocID.push("groc" + grocCount.toString());
     event.preventDefault();
-
   });
+
+  //click button to remove items from form
   $("#fewer-input-button").click(function(event) {
     $("#more-fields div:last-child").remove();
     event.preventDefault();
   })
 
+  //display list of groceries to user capitalized and sorted
   $("#groceries").submit(function(event) {
     var grocList = grocID.map(function(groc){
       return $("#" + groc).val();
-
     });
 
     var sortList = grocList.slice().sort().toString().toUpperCase().split(",");
-    //console.log(sortList);
-    //$(this).hide();
+
     $("#listOutput").html("<ul id='grocItems'></ul>");
     sortList.forEach(function(item) {
       if (item != "") {
@@ -30,10 +32,12 @@ $(document).ready(function() {
       } else {
       }
     });
+  //  $("#groceries").hide();
     event.preventDefault();
+    console.log(grocCount);
   });
 
-
+//other form
   // $("#sentence").submit(function(event) {
   //   var sentenceList = $("#food4").val().split(" ")
   //   console.log(sentenceList);

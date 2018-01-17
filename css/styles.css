@@ -2,8 +2,13 @@
   height: 300px;
 }
 
+
 #form2 {
   display:none;
+}
+
+.btn {
+ margin-bottom: 10px;
 }
 
 ul {
